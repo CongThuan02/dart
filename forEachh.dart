@@ -18,4 +18,7 @@ void main(List<String> args) {
   print('skip');
   var m= list.skip(3);
   print(m);
+
+
+  
 }
