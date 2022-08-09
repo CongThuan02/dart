@@ -10,4 +10,7 @@ void main(List<String> args) {
   print("bo qua 2 phan tu dau:");
   var kq=  list.skip(2);
   print(kq);
+
+  var listSet = list.toSet();
+  print(listSet);
 }
