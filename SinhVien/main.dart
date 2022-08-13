@@ -4,7 +4,7 @@ import 'SinhVien.dart';
 import 'listStudent.dart';
 
 void main(List<String> args) {
-  listStudent sv = new listStudent();
+  ListStudent listsv = new ListStudent();
   int? luachon;
 
   do {
@@ -14,18 +14,19 @@ void main(List<String> args) {
     switch (luachon) {
       case 1:
         {
+          var sv = new SinhVien();
           sv.input();
-          sv.themsinhvien(sv);
+          listsv.themsinhvien(sv);
           break;
         }
       case 2:
         {
-          sv.inDanhSach();
+          listsv.inDanhSach();
           break;
         }
       case 3:
         {
-          sv.xoaToanBo();
+          listsv.xoaToanBo();
           break;
         }
       default:

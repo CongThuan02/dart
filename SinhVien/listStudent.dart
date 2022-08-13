@@ -1,7 +1,8 @@
+
 import 'SinhVien.dart';
 
-class listStudent extends SinhVien {
-  List list = [];
+class ListStudent  {
+  List<SinhVien> list = [];
   listStudent() {
     this.list = [];
   }
