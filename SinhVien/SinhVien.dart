@@ -6,7 +6,7 @@ class SinhVien extends Person {
   List list = [];
   @override
 
-  // SinhVien({required this.name, required this.age, required this.gpa});
+  // TODO SinhVien({required this.name, required this.age, required this.gpa});
   @override
   void input() {
     // TODO: implement input
