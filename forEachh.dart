@@ -2,7 +2,7 @@ import 'dart:io';
 
 void main(List<String> args) {
   List list = [];
-  int? a=5;
+  int a=5;
   stdout.write("nhap vao so phan tu: ");
   for (int i = 0; i < a; i++) {
     stdout.write("nhap vao gia tri cua phan tu thu $i: ");

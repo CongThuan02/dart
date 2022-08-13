@@ -12,7 +12,9 @@ class Person {
 class Student extends Person {
   int? _score;
   String? _zoom;
-  Student({required super.name, required super.age, required super.address});
+
+  Student({required String? name, required int? age, required String? address}) : super(name: name, age: age, address: address);
+  
   void setscore(int value) {
     if (value < 0 || value > 10) {
       print("nhap sai diem yeu cau diem <10 hoac diem >= 0 ");
