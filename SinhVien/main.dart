@@ -35,4 +35,6 @@ void main(List<String> args) {
         }
     }
   } while (luachon != 0);
+  var a = ListStudent.thmmm();
+  print(a);
 }

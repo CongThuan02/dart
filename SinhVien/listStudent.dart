@@ -1,7 +1,6 @@
-
 import 'SinhVien.dart';
 
-class ListStudent  {
+class ListStudent {
   List<SinhVien> list = [];
   listStudent() {
     this.list = [];
@@ -25,5 +24,9 @@ class ListStudent  {
   void xoaToanBo() {
     print('sau khi xoa');
     list.remove(list);
+  }
+
+  static String thmmm() {
+    return "15";
   }
 }
