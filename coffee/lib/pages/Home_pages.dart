@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:coffee/util/coffee_title.dart';
 import 'package:coffee/util/coffee_type.dart';
 import 'package:flutter/material.dart';
@@ -35,23 +37,25 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: Text("is clone"),
+        title: const Text("is clone"),
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: Padding(
           padding: const EdgeInsets.only(left: 15.0),
           child: IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: () {
-                // Do something.
-              }),
+            icon: const Icon(Icons.menu),
+            onPressed: () {
+              // Do something.
+            },
+          ),
         ),
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.only(right: 10.0),
             child: IconButton(
-              icon: Icon(Icons.settings),
+              icon: const Icon(Icons.settings),
               onPressed: () => {
+                // ignore: avoid_print
                 print("Click on settings button"),
               },
             ),
@@ -59,33 +63,29 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       bottomNavigationBar: BottomAppBar(
-        child: Container(
-          // height: 90.0,
-          child: new Row(
-            // mainAxisSize: MainAxisSize.values,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              IconButton(
-                icon: Icon(Icons.home),
-                onPressed: () {
-                  print("Click on home home");
-                },
-              ),
-              IconButton(
-                icon: Icon(Icons.notifications_active),
-                onPressed: () {
-                  print("Click on notifications");
-                },
-              ),
-              IconButton(
-                icon: Icon(Icons.logout),
-                onPressed: () {
-                  int x = 0;
-                  print(x++);
-                },
-              ),
-            ],
-          ),
+        child: Row(
+          // mainAxisSize: MainAxisSize.values,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            IconButton(
+              icon: const Icon(Icons.home),
+              onPressed: () {
+                // ignore: avoid_print
+                print("Click on home home");
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.notifications_active),
+              onPressed: () {
+                // ignore: avoid_print
+                print("Click on notifications");
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.logout),
+              onPressed: () {},
+            ),
+          ],
         ),
       ),
       body: Column(
@@ -94,15 +94,15 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Text(
               'Find the best coffee for you',
-              style: GoogleFonts.bebasNeue(fontSize: 26),
+              style: GoogleFonts.bebasNeue(fontSize: 46),
             ),
           ),
-          SizedBox(height: 25),
+          const SizedBox(height: 25),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: TextField(
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.search),
+                prefixIcon: const Icon(Icons.search),
                 hintText: "find your coffee...",
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.grey.shade600),
@@ -113,8 +113,8 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          SizedBox(height: 25),
-          Container(
+          const SizedBox(height: 25),
+          SizedBox(
             height: 40,
 
             child: ListView.builder(
@@ -140,42 +140,50 @@ class _HomePageState extends State<HomePage> {
             child: Padding(
               padding: const EdgeInsets.only(right: 25),
               child: ListView(
-                // scrollDirection: Axis.vertical, // horizontal xep theo cot
+                // scrollDirection: Axis.horizontal, // horizontal xep theo cot
+                // ignore: prefer_const_literals_to_create_immutables
                 children: [
-                  CoffeeTitle(
+                  const CoffeeTitle(
                     coffeeImagePath: "lib/images/latte.png",
                     coffeeName: "hehe",
                     coffeePrice: '4.00',
+                    titile: "1",
                   ),
-                  CoffeeTitle(
+                  const CoffeeTitle(
                     coffeeImagePath: "lib/images/caffee.png",
                     coffeeName: "hehe",
                     coffeePrice: '4.00',
+                    titile: "7",
                   ),
-                  CoffeeTitle(
+                  const CoffeeTitle(
                     coffeeImagePath: "lib/images/milk.png",
                     coffeeName: "hehe",
                     coffeePrice: '4.00',
+                    titile: "2",
                   ),
-                  CoffeeTitle(
+                  const CoffeeTitle(
                     coffeeImagePath: "lib/images/milk.png",
                     coffeeName: "hehe",
                     coffeePrice: '4.00',
+                    titile: "3",
                   ),
-                  CoffeeTitle(
+                  const CoffeeTitle(
                     coffeeImagePath: "lib/images/milk.png",
                     coffeeName: "hehe",
                     coffeePrice: '4.00',
+                    titile: "4",
                   ),
-                  CoffeeTitle(
+                  const CoffeeTitle(
                     coffeeImagePath: "lib/images/milk.png",
                     coffeeName: "hehe",
                     coffeePrice: '4.00',
+                    titile: "5",
                   ),
-                  CoffeeTitle(
+                  const CoffeeTitle(
                     coffeeImagePath: "lib/images/milk.png",
                     coffeeName: "hehe",
                     coffeePrice: '4.00',
+                    titile: "6",
                   ),
                 ],
               ),

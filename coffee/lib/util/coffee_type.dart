@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CoffeeType extends StatelessWidget {
-  late final String coffeeType;
+  final String coffeeType;
   final bool isSelected;
   final VoidCallback onTap;
 
-  CoffeeType(
+  // ignore: use_key_in_widget_constructors
+  const CoffeeType(
       {required this.coffeeType,
       required this.isSelected,
       required this.onTap});

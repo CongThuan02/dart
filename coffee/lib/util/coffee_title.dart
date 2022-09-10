@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class CoffeeTitle extends StatelessWidget {
-  late final String coffeeImagePath;
-  late final String coffeeName;
-  late final String coffeePrice;
-  CoffeeTitle(
-      {required this.coffeeImagePath,
+   final String coffeeImagePath;
+   final String coffeeName;
+   final String coffeePrice;
+   final String titile;
+   const CoffeeTitle(
+      {Key? key, required this.coffeeImagePath,
       required this.coffeeName,
-      required this.coffeePrice});
+      required this.titile,
+      required this.coffeePrice}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class CoffeeTitle extends StatelessWidget {
         bottom: 25.0,
       ),
       child: Container(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         width: 250,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
@@ -37,13 +39,13 @@ class CoffeeTitle extends StatelessWidget {
                 children: [
                   Text(
                     coffeeName,
-                    style: TextStyle(fontSize: 20),
+                    style: const TextStyle(fontSize: 20),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 3,
                   ),
                   Text(
-                    "with Almond Milk",
+                    titile,
                     style: TextStyle(
                       color: Colors.grey[400],
                     ),
@@ -56,17 +58,20 @@ class CoffeeTitle extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('\$' + coffeePrice),
+                  Text('\$$coffeePrice'),
                   Container(
-                    padding: EdgeInsets.all(0),
+                    width: 40,
+                    height: 40,
+                    padding: const EdgeInsets.all(0),
                     decoration: BoxDecoration(
                       color: Colors.orange,
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: IconButton(
-                      icon: Icon(Icons.add),
-                      onPressed: () {},
-                      iconSize: 20,
+                      icon: const Icon(Icons.add),
+                      onPressed: () {
+                        // Do something.
+                      },
                       splashColor: Colors.red,
                     ),
                   ),
